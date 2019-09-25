@@ -10,7 +10,6 @@ use App\Http\Requests\Admin\UpdateRolesRequest;
 use Illuminate\Http\Request;
 
 
-
 class RolesController extends Controller
 {
     public function index()

@@ -1,11 +1,59 @@
 <?php
 
 return [
-		'user-management' => [		'title' => 'User management',		'fields' => [		],	],
-		'roles' => [		'title' => 'Roles',		'fields' => [			'title' => 'Title',		],	],
-		'users' => [		'title' => 'Users',		'fields' => [			'name' => 'Name',			'email' => 'Email',			'password' => 'Password',			'role' => 'Role',			'remember-token' => 'Remember token',		],	],
-		'companies' => [		'title' => 'Companies',		'fields' => [			'name' => 'Name',			'description' => 'Description',		],	],
-		'employees' => [		'title' => 'Employees',		'fields' => [			'company' => 'Company',			'first-name' => 'First name',			'last-name' => 'Last name',			'email' => 'Email',			'phone' => 'Phone',		],	],
+	
+	'user-management' => [
+		'title' => 'User management',
+		'fields' => [
+		],
+	],
+	
+	'roles' => [
+		'title' => 'Roles',
+		'fields' => [
+			'title' => 'Title',
+		],
+	],
+	
+	'users' => [
+		'title' => 'Users',
+		'fields' => [
+			'name' => 'Name',
+			'email' => 'Email',
+			'password' => 'Password',
+			'role' => 'Role',
+			'remember-token' => 'Remember token',
+		],
+	],
+	
+	'companies' => [
+		'title' => 'Companies',
+		'fields' => [
+			'name' => 'Name',
+			'description' => 'Description',
+		],
+	],
+	
+	'employees' => [
+		'title' => 'Employees',
+		'fields' => [
+			'company' => 'Company',
+			'first-name' => 'First name',
+			'last-name' => 'Last name',
+			'email' => 'Email',
+			'phone' => 'Phone',
+		],
+	],
+	'actions' => [
+		'title' => 'Actions',
+		'fields' => [
+			'company' => 'Company',
+			'first-name' => 'First name',
+			'last-name' => 'Last name',
+			'email' => 'Email',
+			'phone' => 'Phone',
+		],
+	],
 	'qa_create' => 'Create',
 	'qa_save' => 'Save',
 	'qa_edit' => 'Edit',
@@ -248,5 +296,5 @@ return [
 	'qa_customer' => 'Customer',
 	'qa_select_all' => 'Select all',
 	'qa_deselect_all' => 'Deselect all',
-	'quickadmin_title' => 'Vue Demo',
+	'quickadmin_title' => 'Связьком.IBT',
 ];

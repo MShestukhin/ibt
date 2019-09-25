@@ -9,6 +9,10 @@ import CompaniesIndex from './modules/Companies'
 import CompaniesSingle from './modules/Companies/single'
 import EmployeesIndex from './modules/Employees'
 import EmployeesSingle from './modules/Employees/single'
+import ActionsIndex from './modules/Actions'
+import ActionsSingle from './modules/Actions/single'
+import ActionParams from './modules/Actions/params'
+import ActionBonuses from './modules/Actions/bonuses'
 
 import Alert from './modules/alert'
 import ChangePassword from './modules/change_password'
@@ -29,6 +33,10 @@ export default new Vuex.Store({
         CompaniesSingle,
         EmployeesIndex,
         EmployeesSingle,
+        ActionsIndex,
+        ActionsSingle,
+        ActionParams,
+        ActionBonuses
     },
     strict: debug,
 })

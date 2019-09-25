@@ -3,7 +3,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use Yajra\Oci8\Eloquent\OracleEloquent as Eloquent;
 /**
  * Class Company
  *
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $name
  * @property text $description
 */
-class Company extends Model
+class Company extends Eloquent
 {
     use SoftDeletes;
 

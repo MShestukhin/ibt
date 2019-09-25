@@ -1,8 +1,8 @@
 <template>
     <div class="btn-group btn-group-xs">
-        <router-link :to="{ name: xprops.route + '.show', params: { id: row.id } }" class="btn btn-primary">
-            View
-        </router-link>
+<!--        <router-link :to="{ name: xprops.route + '.show', params: { id: row.id } }" class="btn btn-primary">-->
+<!--            View-->
+<!--        </router-link>-->
         <router-link :to="{ name: xprops.route + '.edit', params: { id: row.id } }" class="btn btn-warning">
             Edit
         </router-link>

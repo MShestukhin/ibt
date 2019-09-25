@@ -39,7 +39,8 @@
                     </li>
                 
                 </ul>
-            </li><li>
+            </li>
+            <!-- <li>
                 <router-link :to="{ name: 'companies.index' }">
                     <i class="fa fa-gears"></i>
                     <span class="title">@lang('quickadmin.companies.title')</span>
@@ -48,6 +49,13 @@
                 <router-link :to="{ name: 'employees.index' }">
                     <i class="fa fa-gears"></i>
                     <span class="title">@lang('quickadmin.employees.title')</span>
+                </router-link>
+            </li> -->
+
+            <li>
+                <router-link :to="{ name: 'actions.index' }">
+                    <i class="fa fa-gears"></i>
+                    <span class="title">@lang('quickadmin.actions.title')</span>
                 </router-link>
             </li>
 

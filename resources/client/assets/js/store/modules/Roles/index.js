@@ -27,12 +27,13 @@ const getters = {
 const actions = {
     fetchData({ commit, state }) {
         commit('setLoading', true)
-
         axios.get('/api/v1/roles')
             .then(response => {
+                console.log(response.data.data)
                 commit('setAll', response.data.data)
             })
             .catch(error => {
+                console.log(error);
                 message = error.response.data.message || error.message
                 commit('setError', message)
                 console.log(message)
@@ -49,6 +50,7 @@ const actions = {
                 }))
             })
             .catch(error => {
+                
                 message = error.response.data.message || error.message
                 commit('setError', message)
                 console.log(message)

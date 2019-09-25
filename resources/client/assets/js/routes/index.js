@@ -18,6 +18,8 @@ import EmployeesIndex from '../components/cruds/Employees/Index.vue'
 import EmployeesCreate from '../components/cruds/Employees/Create.vue'
 import EmployeesShow from '../components/cruds/Employees/Show.vue'
 import EmployeesEdit from '../components/cruds/Employees/Edit.vue'
+import ActionsIndex from '../components/cruds/Actions/Index.vue'
+import ActionsEdit from '../components/cruds/Actions/Edit.vue'
 
 Vue.use(VueRouter)
 
@@ -39,10 +41,12 @@ const routes = [
     { path: '/employees/create', component: EmployeesCreate, name: 'employees.create' },
     { path: '/employees/:id', component: EmployeesShow, name: 'employees.show' },
     { path: '/employees/:id/edit', component: EmployeesEdit, name: 'employees.edit' },
+    { path: '/actions', component: ActionsIndex, name: 'actions.index' },
+    { path: '/actions/:id/edit', component: ActionsEdit, name: 'actions.edit' },
 ]
 
 export default new VueRouter({
     mode: 'history',
-    base: '/admin',
+    // base: '/admin',
     routes
 })
