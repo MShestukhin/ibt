@@ -26782,29 +26782,117 @@ var render = function() {
               _c("form", [
                 _c("div", { staticClass: "col-xs-12" }, [
                   _c("div", { staticClass: "form-group col-md-2" }, [
-                    _c("label", { attrs: { for: "inputEmail4" } }, [
-                      _vm._v("№ Шага")
-                    ]),
+                    _c("label", { attrs: { for: "step" } }, [_vm._v("№ Шага")]),
                     _vm._v(" "),
                     _c("input", {
                       staticClass: "form-control",
-                      attrs: {
-                        type: "email",
-                        id: "inputEmail4",
-                        placeholder: "Email"
-                      },
+                      attrs: { type: "text", id: "step", placeholder: "Email" },
                       domProps: { value: bonus.step }
                     })
                   ]),
                   _vm._v(" "),
                   _vm._m(0, true),
                   _vm._v(" "),
-                  _vm._m(1, true),
+                  _c("div", { staticClass: "form-group col-md-2" }, [
+                    _c("label", { attrs: { for: "code" } }, [_vm._v("Код")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "code", placeholder: "" },
+                      domProps: { value: bonus.lang[0].obj_id }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _vm._m(2, true)
+                  _c("div", { staticClass: "form-group col-md-4" }, [
+                    _c("label", { attrs: { for: "info" } }, [
+                      _vm._v("Описание")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "info",
+                        placeholder: "Название шага"
+                      },
+                      domProps: { value: bonus.lang[0].step_name }
+                    })
+                  ])
                 ]),
                 _vm._v(" "),
-                _vm._m(3, true),
+                _c("div", { staticClass: "col-xs-12" }, [
+                  _c("div", { staticClass: "form-group col-md-3" }, [
+                    _c("label", { attrs: { for: "attempt" } }, [
+                      _vm._v("Попытки")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "attempt",
+                        placeholder: "Количество попыток"
+                      },
+                      domProps: { value: bonus.lang[0].attempt }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-3" }, [
+                    _c("label", { attrs: { for: "att_timeout" } }, [
+                      _vm._v("Таймаут")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "att_timeout" },
+                      domProps: { value: bonus.lang[0].att_timeout }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-6" }, [
+                    _c("div", { staticClass: "form-check" }, [
+                      _c("input", {
+                        staticClass: "form-check-input",
+                        attrs: { type: "checkbox", id: "step_mandatory" },
+                        domProps: { checked: bonus.lang[0].step_mandatory }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-check-label",
+                          attrs: { for: "step_mandatory" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                        Обязательный шаг\n                                    "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-check" }, [
+                      _c("input", {
+                        staticClass: "form-check-input",
+                        attrs: { type: "checkbox", id: "once_only" },
+                        domProps: { checked: bonus.lang[0].once_only }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-check-label",
+                          attrs: { for: "once_only" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                        Только при первом подключении к акции\n                                    "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -26877,110 +26965,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group col-md-4" }, [
-      _c("label", { attrs: { for: "inputPassword4" } }, [_vm._v("Действие")]),
+      _c("label", { attrs: { for: "action" } }, [_vm._v("Действие")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "inputPassword4",
-          placeholder: "Password"
-        }
+        attrs: { type: "text", id: "action" }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group col-md-2" }, [
-      _c("label", { attrs: { for: "inputEmail4" } }, [_vm._v("Код")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "email", id: "inputEmail4", placeholder: "Email" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group col-md-4" }, [
-      _c("label", { attrs: { for: "inputPassword4" } }, [_vm._v("Описание")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "inputPassword4",
-          placeholder: "Password"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xs-12" }, [
-      _c("div", { staticClass: "form-group col-md-3" }, [
-        _c("label", { attrs: { for: "inputEmail4" } }, [_vm._v("Попытки")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "email", id: "inputEmail4", placeholder: "Email" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group col-md-3" }, [
-        _c("label", { attrs: { for: "inputPassword4" } }, [_vm._v("Таймаут")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "password",
-            id: "inputPassword4",
-            placeholder: "Password"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group col-md-6" }, [
-        _c("div", { staticClass: "form-check" }, [
-          _c("input", {
-            staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck1" }
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck1" } },
-            [
-              _vm._v(
-                "\n                                        Обязательный шаг\n                                    "
-              )
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-check" }, [
-          _c("input", {
-            staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck1" }
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck1" } },
-            [
-              _vm._v(
-                "\n                                        Только при первом подключении к акции\n                                    "
-              )
-            ]
-          )
-        ])
-      ])
     ])
   }
 ]

@@ -15,43 +15,43 @@
                     <form>
                         <div class="col-xs-12" >
                             <div class="form-group col-md-2">
-                                <label for="inputEmail4">№ Шага</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" :value="bonus.step">
+                                <label for="step">№ Шага</label>
+                                <input type="text" class="form-control" id="step" placeholder="Email" :value="bonus.step">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputPassword4">Действие</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                <label for="action">Действие</label>
+                                <input type="text" class="form-control" id="action">
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="inputEmail4">Код</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="code">Код</label>
+                                <input type="text" class="form-control" id="code" placeholder="" :value="bonus.lang[0].obj_id">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputPassword4">Описание</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                <label for="info">Описание</label>
+                                <input type="text" class="form-control" id="info" placeholder="Название шага" :value="bonus.lang[0].step_name">
                             </div>
                         </div>
                         <div class="col-xs-12" >
                             <div class="form-group col-md-3">
-                                <label for="inputEmail4">Попытки</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="attempt">Попытки</label>
+                                <input type="text" class="form-control" id="attempt" placeholder="Количество попыток" :value="bonus.lang[0].attempt">
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputPassword4">Таймаут</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                <label for="att_timeout">Таймаут</label>
+                                <input type="text" class="form-control" id="att_timeout" :value="bonus.lang[0].att_timeout">
                             </div>
                             <div class="form-group col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" type="checkbox" id="step_mandatory" :checked="bonus.lang[0].step_mandatory">
+                                    <label class="form-check-label" for="step_mandatory">
                                         Обязательный шаг
                                     </label>
                                 </div>
 <!--                            </div>-->
 <!--                            <div class="form-group col-md-4">-->
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" type="checkbox" id="once_only" :checked="bonus.lang[0].once_only">
+                                    <label class="form-check-label" for="once_only" >
                                         Только при первом подключении к акции
                                     </label>
                                 </div>
