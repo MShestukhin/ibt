@@ -14,7 +14,7 @@
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Настройки</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Регионы</a>
+                            <a class="nav-link" id="regions-tab" data-toggle="tab" href="#regions" role="tab" aria-controls="regions" aria-selected="false">Регионы</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="EIRtriggers-tab" data-toggle="tab" href="#EIRtriggers" role="tab" aria-controls="EIRtriggers" aria-selected="false">Триггеры для EIR</a>
@@ -40,7 +40,7 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab"><action-description :action="item[0]"/></div>
                         <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab"><action-params/></div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                        <div class="tab-pane fade" id="regions" role="tabpanel" aria-labelledby="regions-tab"><action-regions/></div>
                         <div class="tab-pane fade" id="EIRtriggers" role="tabpanel" aria-labelledby="EIRtriggers-tab">adfadf</div>
                         <div class="tab-pane fade" id="members" role="tabpanel" aria-labelledby="members-tab">sss</div>
                         <div class="tab-pane fade" id="pred_bonus" role="tabpanel" aria-labelledby="pred_bonus-tab"><action-bonus :bon="0"/></div>
@@ -60,8 +60,10 @@ import  ActionDescription  from './Action/ActionDescription.vue'
 import  ActionParams  from './Action/ActionParams.vue'
 import  ActionRefuse  from './Action/ActionRefuse.vue'
 import  ActionBonus  from './Action/ActionBonus.vue'
+import  ActionRegions  from './Action/ActionRegions.vue'
+
 export default {
-    components: { ActionDescription, ActionParams,ActionRefuse,ActionBonus },
+    components: { ActionDescription, ActionParams,ActionRefuse,ActionBonus,ActionRegions },
     data() {
         return {
             // Code...
