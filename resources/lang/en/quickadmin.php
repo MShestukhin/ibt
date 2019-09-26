@@ -3,20 +3,20 @@
 return [
 	
 	'user-management' => [
-		'title' => 'User management',
+		'title' => 'Администрирование',
 		'fields' => [
 		],
 	],
 	
 	'roles' => [
-		'title' => 'Roles',
+		'title' => 'Роли',
 		'fields' => [
 			'title' => 'Title',
 		],
 	],
 	
 	'users' => [
-		'title' => 'Users',
+		'title' => 'Пользователи',
 		'fields' => [
 			'name' => 'Name',
 			'email' => 'Email',
@@ -45,7 +45,7 @@ return [
 		],
 	],
 	'actions' => [
-		'title' => 'Actions',
+		'title' => 'Акции',
 		'fields' => [
 			'company' => 'Company',
 			'first-name' => 'First name',
@@ -55,14 +55,14 @@ return [
 		],
 	],
     'reports' => [
-        'title' => 'Reports',
-        'msisdn/imei_deteils' => 'msisdn/imei Deteils',
-        'num_action_members' => 'Num action members',
-        'using_time' => 'Report for time using bonuses',
-        'err_bonus' => 'Error proccesing bonus',
-        'sms_message' => 'Sms message MSISDN',
-        'action_free' => 'Action fee',
-        'act_members' => 'Action members',
+        'title' => 'Отчёты',
+        'msisdn/imei_deteils' => 'Детализация по MSISDN/IMEI',
+        'num_action_members' => 'Количество участников',
+        'using_time' => 'Время использования бонуса',
+        'err_bonus' => 'Ошибки обработки бонуса',
+        'sms_message' => 'Смс сообщения по MSISDN',
+        'action_free' => 'Свободный по акциям',
+        'act_members' => 'Участники акции',
         'fields' => [
         ],
     ],
@@ -97,9 +97,9 @@ return [
 	'qa_administrator_can_create_other_users' => 'Administrator (can create other users)',
 	'qa_simple_user' => 'Simple user',
 	'qa_title' => 'Title',
-	'qa_roles' => 'Roles',
+	'qa_roles' => 'Роли',
 	'qa_role' => 'Role',
-	'qa_user_management' => 'User management',
+	'qa_user_management' => 'Администрирование',
 	'qa_users' => 'Users',
 	'qa_user' => 'User',
 	'qa_name' => 'Name',

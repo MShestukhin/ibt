@@ -26,8 +26,8 @@
             <label class="col-md-12" for="act_sd">Срок действия акции</label>
     		<div class="row-fluid " id="act_sd">
                 <div class="col-md-4">
-                    <input type="date">
-<!--                    <div class="input-group date" data-provide="datepicker">-->
+                    <date-picker v-model="action.act_sd" :config="options"/>
+                    <!--                    <div class="input-group date" data-provide="datepicker">-->
 <!--                        <input type="text" class="form-control">-->
 <!--                        <div class="input-group-addon">-->
 <!--                            <span class="glyphicon glyphicon-th"></span>-->
@@ -39,11 +39,8 @@
 <!--					</div>-->
 			    </div>
 
-			    <div class="col-md-8">
-					<div class="input-append">
-						<input type="text" class="dateTime ed" name="act_ed" title="Срок действия акции. Конец периода (дд.мм.гггг чч:ми:сс)" placeholder="дд.мм.гггг чч:ми:сс">
-						<span class="add-on"><i class="icon-calendar"></i></span>
-					</div>
+			    <div class="col-md-4">
+                    <date-picker v-model="date" :config="options"/>
 				</div>
 			</div>
 
@@ -57,53 +54,44 @@
         <div class="col-md-12">
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Акция только для новых устройств
+                    <input class="form-check-input" type="checkbox" id="for_only_new_devices" :checked="item[1].for_only_new_devices.checked">
+                    <label class="form-check-label" for="for_only_new_devices">
+                        {{item[1].for_only_new_devices.dsc}}
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="only_this" :checked="action.only_this">
+                    <label class="form-check-label" for="only_this">
                         Запрещено совместное участие в других акциях
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="no_eir" :checked="item[1].no_eir.checked">
+                    <label class="form-check-label" for="no_eir">
+                        {{item[1].no_eir.checked}}
                         Отключение триггера EIR
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Подключение составного предбонуса
+                    <input class="form-check-input" type="checkbox" id="pre_bonus_on" :checked="item[1].pre_bonus_on.checked">
+                    <label class="form-check-label" for="pre_bonus_on">
+                        {{item[1].pre_bonus_on.dsc}}
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Подключение составного бонуса
+                    <input class="form-check-input" type="checkbox" id="bonus_switch_on" :checked="item[1].bonus_switch_on.checked">
+                    <label class="form-check-label" for="bonus_switch_on">
+                        {{item[1].bonus_switch_on.dsc}}
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Отключение составного бонуса
+                    <input class="form-check-input" type="checkbox" id="bonus_switch_off" :checked="item[1].bonus_switch_off.checked">
+                    <label class="form-check-label" for="bonus_switch_off">
+                        {{item[1].bonus_switch_off.dsc}}
                     </label>
                 </div>
             </div>
         </div>
-        <!-- <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-        </div> -->
         <div class="col-md-12">
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Условия акции</label>
@@ -125,8 +113,26 @@ export default {
     name: "ActionDescription",
     data() {
         return {
-            alert_status: {'Зарезервирована' : 'label label-warning', 'Запущена': 'label label-success', 'Завершена': 'label label-default'}
+            alert_status: {'Зарезервирована' : 'label label-warning', 'Запущена': 'label label-success', 'Завершена': 'label label-default'},
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false,
+            }
         }
-    }
+    },
+    computed: {
+        ...mapGetters('ActionParams', ['item']),
+    },
+    watch: {
+        "$route.params.id": function () {
+            this.fetchData(this.$route.params.id)
+        }
+    },
+    methods: {
+        ...mapActions('ActionParams', ['fetchData']),
+    },
+    created() {
+        this.fetchData(this.$route.params.id);
+    },
 }
 </script>

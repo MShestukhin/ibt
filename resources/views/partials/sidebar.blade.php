@@ -69,7 +69,7 @@
                 <ul class="treeview-menu">
                     <li>
                         <router-link :to="{ name: 'reports.msisdn_imei_detail' }">
-                            <i class="fa fa-briefcase"></i>
+{{--                            <i class="fa fa-briefcase"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.msisdn/imei_deteils')
                             </span>
@@ -77,7 +77,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.num_members' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.num_action_members')
                             </span>
@@ -85,7 +85,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.using_time' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.using_time')
                             </span>
@@ -93,7 +93,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.err_bonus' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.err_bonus')
                             </span>
@@ -101,7 +101,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.sms_message' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.sms_message')
                             </span>
@@ -109,7 +109,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.action_free' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.action_free')
                             </span>
@@ -117,7 +117,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'reports.act_members' }">
-                            <i class="fa fa-user"></i>
+{{--                            <i class="fa fa-user"></i>--}}
                             <span class="title">
                                 @lang('quickadmin.reports.act_members')
                             </span>

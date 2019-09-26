@@ -4,10 +4,10 @@
 <!--            View-->
 <!--        </router-link>-->
         <router-link :to="{ name: xprops.route + '.edit', params: { id: row.id } }" class="btn btn-warning">
-            Edit
+            Редактировать
         </router-link>
         <button @click="destroyData(row.id)" type="button" class="btn btn-danger">
-            Delete
+            Закрыть
         </button>
    </div>
 </template>

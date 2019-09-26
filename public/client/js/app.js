@@ -497,18 +497,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__("./node_modules/vuex/dist/vuex.esm.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -624,8 +614,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     name: "ActionDescription",
     data: function data() {
         return {
-            alert_status: { 'Зарезервирована': 'label label-warning', 'Запущена': 'label label-success', 'Завершена': 'label label-default' }
+            alert_status: { 'Зарезервирована': 'label label-warning', 'Запущена': 'label label-success', 'Завершена': 'label label-default' },
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
         };
+    },
+
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["mapGetters"])('ActionParams', ['item'])),
+    watch: {
+        "$route.params.id": function $routeParamsId() {
+            this.fetchData(this.$route.params.id);
+        }
+    },
+    methods: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["mapActions"])('ActionParams', ['fetchData'])),
+    created: function created() {
+        this.fetchData(this.$route.params.id);
     }
 });
 
@@ -1112,7 +1117,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            columns: [{ title: '#', field: 'id', sortable: true, colStyle: 'width: 50px;' }, { title: 'Actions', field: 'name', visible: true }, { title: 'Ed', field: 'act_sd', visible: true }, { title: 'Sd', field: 'act_ed', visible: true }, { title: 'Priority', field: 'priority', visible: true }, { title: 'Members', field: 'act_members', visible: true }, { title: 'Creator', field: 'user_name', visible: true }, { title: 'On/off predbonus', field: 'pre_bonus_on', visible: true }, { title: 'On/off bonus', field: 'bonus_switch_off', visible: true }, { title: 'Folder name', field: 'folder_name', visible: true }, { title: 'Status', field: 'state', visible: true }, { title: '', tdComp: __WEBPACK_IMPORTED_MODULE_1__dtmodules_DatatableActions___default.a }],
+            columns: [{ title: '#', field: 'id', sortable: true, colStyle: 'width: 50px;' }, { title: 'Акция', field: 'name', visible: true }, { title: 'Ed', field: 'act_sd', visible: true }, { title: 'Sd', field: 'act_ed', visible: true }, { title: 'Приоритет', field: 'priority', visible: true }, { title: 'Участники', field: 'act_members', visible: true }, { title: 'Создал акцию', field: 'user_name', visible: true }, { title: 'On/off предбонуса', field: 'pre_bonus_on', visible: true }, { title: 'On/off bonus', field: 'bonus_switch_off', visible: true }, { title: 'Каталог акции', field: 'folder_name', visible: true }, { title: 'Статус', field: 'state', visible: true }, { title: '', tdComp: __WEBPACK_IMPORTED_MODULE_1__dtmodules_DatatableActions___default.a }],
             query: { sort: 'id', order: 'desc' },
             xprops: {
                 module: 'ActionsIndex',
@@ -27059,7 +27064,7 @@ var render = function() {
             to: { name: _vm.xprops.route + ".edit", params: { id: _vm.row.id } }
           }
         },
-        [_vm._v("\n            Edit\n        ")]
+        [_vm._v("\n            Редактировать\n        ")]
       ),
       _vm._v(" "),
       _c(
@@ -27073,7 +27078,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n            Delete\n        ")]
+        [_vm._v("\n            Закрыть\n        ")]
       )
     ],
     1
@@ -29248,7 +29253,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("section", { staticClass: "content-header" }, [
-      _c("h1", [_vm._v("Actions")])
+      _c("h1", [_vm._v("Акции")])
     ])
   },
   function() {
@@ -29755,7 +29760,43 @@ var render = function() {
       _vm._v("Срок действия акции")
     ]),
     _vm._v(" "),
-    _vm._m(0),
+    _c("div", { staticClass: "row-fluid ", attrs: { id: "act_sd" } }, [
+      _c(
+        "div",
+        { staticClass: "col-md-4" },
+        [
+          _c("date-picker", {
+            attrs: { config: _vm.options },
+            model: {
+              value: _vm.action.act_sd,
+              callback: function($$v) {
+                _vm.$set(_vm.action, "act_sd", $$v)
+              },
+              expression: "action.act_sd"
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4" },
+        [
+          _c("date-picker", {
+            attrs: { config: _vm.options },
+            model: {
+              value: _vm.date,
+              callback: function($$v) {
+                _vm.date = $$v
+              },
+              expression: "date"
+            }
+          })
+        ],
+        1
+      )
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-row" }, [
       _c("div", { staticClass: "col-md-12" }, [
@@ -29776,60 +29817,26 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _vm._m(3)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row-fluid ", attrs: { id: "act_sd" } }, [
-      _c("div", { staticClass: "col-md-4" }, [
-        _c("input", { attrs: { type: "date" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "input-append" }, [
-          _c("input", {
-            staticClass: "dateTime ed",
-            attrs: {
-              type: "text",
-              name: "act_ed",
-              title: "Срок действия акции. Конец периода (дд.мм.гггг чч:ми:сс)",
-              placeholder: "дд.мм.гггг чч:ми:сс"
-            }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "add-on" }, [
-            _c("i", { staticClass: "icon-calendar" })
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12" }, [
+    _c("div", { staticClass: "col-md-12" }, [
       _c("div", { staticClass: "form-group" }, [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "for_only_new_devices" },
+            domProps: { checked: _vm.item[1].for_only_new_devices.checked }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            {
+              staticClass: "form-check-label",
+              attrs: { for: "for_only_new_devices" }
+            },
             [
               _vm._v(
-                "\n                        Акция только для новых устройств\n                    "
+                "\n                        " +
+                  _vm._s(_vm.item[1].for_only_new_devices.dsc) +
+                  "\n                    "
               )
             ]
           )
@@ -29838,12 +29845,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "only_this" },
+            domProps: { checked: _vm.action.only_this }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            { staticClass: "form-check-label", attrs: { for: "only_this" } },
             [
               _vm._v(
                 "\n                        Запрещено совместное участие в других акциях\n                    "
@@ -29855,15 +29863,18 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "no_eir" },
+            domProps: { checked: _vm.item[1].no_eir.checked }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            { staticClass: "form-check-label", attrs: { for: "no_eir" } },
             [
               _vm._v(
-                "\n                        Отключение триггера EIR\n                    "
+                "\n                        " +
+                  _vm._s(_vm.item[1].no_eir.checked) +
+                  "\n                        Отключение триггера EIR\n                    "
               )
             ]
           )
@@ -29872,15 +29883,18 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "pre_bonus_on" },
+            domProps: { checked: _vm.item[1].pre_bonus_on.checked }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            { staticClass: "form-check-label", attrs: { for: "pre_bonus_on" } },
             [
               _vm._v(
-                "\n                        Подключение составного предбонуса\n                    "
+                "\n                        " +
+                  _vm._s(_vm.item[1].pre_bonus_on.dsc) +
+                  "\n                    "
               )
             ]
           )
@@ -29889,15 +29903,21 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "bonus_switch_on" },
+            domProps: { checked: _vm.item[1].bonus_switch_on.checked }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            {
+              staticClass: "form-check-label",
+              attrs: { for: "bonus_switch_on" }
+            },
             [
               _vm._v(
-                "\n                        Подключение составного бонуса\n                    "
+                "\n                        " +
+                  _vm._s(_vm.item[1].bonus_switch_on.dsc) +
+                  "\n                    "
               )
             ]
           )
@@ -29906,22 +29926,34 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-check" }, [
           _c("input", {
             staticClass: "form-check-input",
-            attrs: { type: "checkbox", id: "gridCheck" }
+            attrs: { type: "checkbox", id: "bonus_switch_off" },
+            domProps: { checked: _vm.item[1].bonus_switch_off.checked }
           }),
           _vm._v(" "),
           _c(
             "label",
-            { staticClass: "form-check-label", attrs: { for: "gridCheck" } },
+            {
+              staticClass: "form-check-label",
+              attrs: { for: "bonus_switch_off" }
+            },
             [
               _vm._v(
-                "\n                        Отключение составного бонуса\n                    "
+                "\n                        " +
+                  _vm._s(_vm.item[1].bonus_switch_off.dsc) +
+                  "\n                    "
               )
             ]
           )
         ])
       ])
-    ])
-  },
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
+}
+var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
