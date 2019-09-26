@@ -2,6 +2,7 @@
 //'middleware' => ['auth:api']
 Route::group(['prefix' => '/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
     Route::post('change-password', 'ChangePasswordController@changePassword')->name('auth.change_password');
+    Route::get('num_action_members', 'ReportController@num_action_members');
     Route::apiResource('actions', 'ActionsController');
     Route::apiResource('actionParams', 'ActionParamController');
     Route::apiResource('actionBonuses', 'ActionBonusController');

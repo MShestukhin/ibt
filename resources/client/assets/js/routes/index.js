@@ -20,6 +20,13 @@ import EmployeesShow from '../components/cruds/Employees/Show.vue'
 import EmployeesEdit from '../components/cruds/Employees/Edit.vue'
 import ActionsIndex from '../components/cruds/Actions/Index.vue'
 import ActionsEdit from '../components/cruds/Actions/Edit.vue'
+import ActionMembers from '../components/cruds/Reports/Action_members.vue'
+import ActionFree from '../components/cruds/Reports/Action_free.vue'
+import ErrProcessingBonus from '../components/cruds/Reports/Err_processing_bonus.vue'
+import SmsMessegeMsisdn from '../components/cruds/Reports/SMS_messege_msisdn.vue'
+import UsingTime from '../components/cruds/Reports/using_time.vue'
+import Num_action_members from '../components/cruds/Reports/Num_action_members.vue'
+import Msisdn_imei_detail from '../components/cruds/Reports/MSISDN_IMEI_detail.vue'
 
 Vue.use(VueRouter)
 
@@ -43,6 +50,13 @@ const routes = [
     { path: '/employees/:id/edit', component: EmployeesEdit, name: 'employees.edit' },
     { path: '/actions', component: ActionsIndex, name: 'actions.index' },
     { path: '/actions/:id/edit', component: ActionsEdit, name: 'actions.edit' },
+    { path: '/reports/num_members', component: Num_action_members, name: 'reports.num_members' },
+    { path: '/reports/action_free', component: ActionFree, name: 'reports.action_free' },
+    { path: '/reports/act_members', component: ActionMembers, name: 'reports.act_members' },
+    { path: '/reports/err_processing_bonus', component: ErrProcessingBonus, name: 'reports.err_bonus' },
+    { path: '/reports/sms_message', component: SmsMessegeMsisdn, name: 'reports.sms_message' },
+    { path: '/reports/using_time', component: UsingTime, name: 'reports.using_time' },
+    { path: '/reports/msisdn_imei_detail', component: Msisdn_imei_detail, name: 'reports.msisdn_imei_detail' },
 ]
 
 export default new VueRouter({

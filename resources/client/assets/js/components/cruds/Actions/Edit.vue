@@ -38,8 +38,8 @@
                 </div>
                 <div class="box-body">
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab"><action-description :action="item[0]"/></div>
-                        <div class="tab-pane fade active in" id="profile" role="tabpanel" aria-labelledby="profile-tab"><action-params/></div>
+                        <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab"><action-description :action="item[0]"/></div>
+                        <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab"><action-params/></div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
                         <div class="tab-pane fade" id="EIRtriggers" role="tabpanel" aria-labelledby="EIRtriggers-tab">adfadf</div>
                         <div class="tab-pane fade" id="members" role="tabpanel" aria-labelledby="members-tab">sss</div>

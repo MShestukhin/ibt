@@ -1,9 +1,12 @@
 <?php
-
+//require 'vendor/autoload.php';
 use App\Actions;
 use App\Http\Resources\Actions as ActionsResource;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 Route::get('/', function () {
-    return redirect('/admin/home'); 
+    return redirect('/admin/home');
 });
 
 // Authentication Routes...

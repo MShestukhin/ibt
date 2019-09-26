@@ -3,7 +3,10 @@
     <div class="row-fluid">
         <div class="col-md-4 mb-4">
             <label for="act_name">Наименование акции</label>
-            <input style="width:250px" type="text" name="act_name" placeholder="Наименование акции" title="Наименование акции" :value="action.name">
+                <div class="input-group" id="act_name">
+                    <span class="input-group-addon"><i class="glyphicon">{{action.id}}</i></span>
+                    <input  style="width:250px" id="name"  name="act_name" type="text" class="form-control" placeholder="Наименование акции" :value="action.name">
+                </div>
         </div>
         <div class="col-md-2 mb-3">
             <label class="form-check-label" for="autoSizingCheck2">
@@ -15,16 +18,25 @@
             <label class="form-check-label" for="autoSizingCheck2">
             Статус акции
             </label>
-                <p><span class="badge alert-success"><h5>{{action.state}}</h5></span></p>
+                <p><span :class="alert_status[action.state]"><h5>{{action.state}}</h5></span></p>
+
         </div>
     </div>
+
             <label class="col-md-12" for="act_sd">Срок действия акции</label>
     		<div class="row-fluid " id="act_sd">
                 <div class="col-md-4">
-					<div class="input-append">
-						<input type="text" required class="dateTime sd"  name="act_sd" title="Срок действия акции. Начало периода (дд.мм.гггг чч:ми:сс)" placeholder="дд.мм.гггг чч:ми:сс" :value="action.act_sd">
-						<span class="add-on"><i class="icon-calendar"></i></span>
-					</div>
+                    <input type="date">
+<!--                    <div class="input-group date" data-provide="datepicker">-->
+<!--                        <input type="text" class="form-control">-->
+<!--                        <div class="input-group-addon">-->
+<!--                            <span class="glyphicon glyphicon-th"></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--					<div class="input-append">-->
+<!--						<input type="text" required class="dateTime sd"  name="act_sd" title="Срок действия акции. Начало периода (дд.мм.гггг чч:ми:сс)" placeholder="дд.мм.гггг чч:ми:сс" :value="action.act_sd">-->
+<!--						<span class="add-on"><i class="icon-calendar"></i></span>-->
+<!--					</div>-->
 			    </div>
 
 			    <div class="col-md-8">
@@ -110,6 +122,11 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
     props: ["action"],
-    name: "ActionDescription"
+    name: "ActionDescription",
+    data() {
+        return {
+            alert_status: {'Зарезервирована' : 'label label-warning', 'Запущена': 'label label-success', 'Завершена': 'label label-default'}
+        }
+    }
 }
 </script>

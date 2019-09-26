@@ -54,6 +54,18 @@ return [
 			'phone' => 'Phone',
 		],
 	],
+    'reports' => [
+        'title' => 'Reports',
+        'msisdn/imei_deteils' => 'msisdn/imei Deteils',
+        'num_action_members' => 'Num action members',
+        'using_time' => 'Report for time using bonuses',
+        'err_bonus' => 'Error proccesing bonus',
+        'sms_message' => 'Sms message MSISDN',
+        'action_free' => 'Action fee',
+        'act_members' => 'Action members',
+        'fields' => [
+        ],
+    ],
 	'qa_create' => 'Create',
 	'qa_save' => 'Save',
 	'qa_edit' => 'Edit',

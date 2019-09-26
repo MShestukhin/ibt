@@ -3,7 +3,6 @@
         <section class="content-header">
             <h1>Actions</h1>
         </section>
-
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">

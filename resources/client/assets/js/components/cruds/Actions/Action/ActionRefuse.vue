@@ -18,17 +18,22 @@
 
         <h4 class="col-md-12">Отключение через WEB</h4>
         <div class="form-check col-md-12">
-            <input class="form-check-input" type="checkbox" v-model="item[1].sms_web_refuse_success.val"  v-bind:true-value="on" v-bind:false-value="off" :id="item[1].sms_web_refuse_success.code">
+            <input class="form-check-input" type="checkbox" v-model="sms_web_refuse_success=show[item[1].sms_web_refuse_success.val]" :id="item[1].sms_web_refuse_success.code">
             <label class="form-check-label" :for="item[1].sms_web_refuse_success.code">
                 {{item[1].sms_web_refuse_success.dsc}}
             </label>
         </div>
 
-        <div class="form-group" v-for="(items, index) in item[0]">
-            <div class="col-md-6">
-                <label for="sms_text_web_refuse_success">{{items.sms_text_web_refuse_success.lang_code}}</label>
-                <textarea class="form-control" id="sms_text_web_refuse_success" rows="2" :placeholder="items.sms_text_web_refuse_success.def_val">{{items.sms_text_web_refuse_success.val_txt}}</textarea>
+        <div v-if="sms_web_refuse_success == true">
+            <div class="form-group" v-for="(items, index) in item[0]">
+                <div class="col-md-6">
+                    <label for="sms_text_web_refuse_success">{{items.sms_text_web_refuse_success.lang_code}}</label>
+                    <textarea class="form-control" id="sms_text_web_refuse_success" rows="2" :placeholder="items.sms_text_web_refuse_success.def_val">{{items.sms_text_web_refuse_success.val_txt}}</textarea>
+                </div>
             </div>
+        </div>
+        <div v-else class="col-md-12">
+            <div class="alert alert-info" style="width:363px">Не информировать</div>
         </div>
     </form>
 </template>
@@ -38,6 +43,7 @@
     export default {
         data() {
             return {
+                show: {'on':true,'off': false}
             }
         },
         computed: {
