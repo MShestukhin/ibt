@@ -14,20 +14,20 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="msisdn">MSISDN</label>
-                                            <input type="email" class="form-control" id="msisdn" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <input type="text" class="form-control" id="msisdn" aria-describedby="emailHelp">
 <!--                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                         </div>
                                         <div class="form-group">
                                             <label for="imei">IMEI</label>
-                                            <input type="password" class="form-control" id="imei" placeholder="Password">
+                                            <input type="text" class="form-control" id="imei">
                                         </div>
                                         <div class="form-group">
                                             <label for="action_id">ID Акции</label>
-                                            <input type="password" class="form-control" id="action_id" placeholder="Password">
+                                            <input type="text" class="form-control" id="action_id">
                                         </div>
                                         <div class="form-group">
                                             <label for="action_name">Название акции</label>
-                                            <input type="password" class="form-control" id="action_name " placeholder="Password">
+                                            <input type="text" class="form-control" id="action_name">
                                         </div>
                                         <button type="button" v-on:click="getReport" class="btn btn-primary">Submit</button>
                                     </form>

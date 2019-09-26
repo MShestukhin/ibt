@@ -2214,6 +2214,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Action_members"
@@ -3731,7 +3733,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -24538,18 +24540,11 @@ var staticRenderFns = [
       _c("input", {
         staticClass: "form-control",
         attrs: {
-          type: "email",
+          type: "text",
           id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
+          "aria-describedby": "emailHelp"
         }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
-        [_vm._v("We'll never share your email with anyone else.")]
-      )
+      })
     ])
   },
   function() {
@@ -24563,11 +24558,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "exampleInputPassword1",
-          placeholder: "Password"
-        }
+        attrs: { type: "text", id: "exampleInputPassword1" }
       })
     ])
   }
@@ -25005,12 +24996,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "email",
-          id: "msisdn",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
-        }
+        attrs: { type: "text", id: "msisdn", "aria-describedby": "emailHelp" }
       })
     ])
   },
@@ -25023,7 +25009,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "action_id", placeholder: "Password" }
+        attrs: { type: "text", id: "action_id" }
       })
     ])
   },
@@ -25038,7 +25024,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "action_name ", placeholder: "Password" }
+        attrs: { type: "text", id: "action_name " }
       })
     ])
   }
@@ -25659,6 +25645,8 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(2),
                       _vm._v(" "),
+                      _vm._m(3),
+                      _vm._v(" "),
                       _c(
                         "button",
                         {
@@ -25693,25 +25681,16 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-        _vm._v("Email address")
-      ]),
+      _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("Акция")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
         attrs: {
-          type: "email",
+          type: "text",
           id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
+          "aria-describedby": "emailHelp"
         }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
-        [_vm._v("We'll never share your email with anyone else.")]
-      )
+      })
     ])
   },
   function() {
@@ -25719,17 +25698,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-        _vm._v("Password")
-      ]),
+      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("С")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "exampleInputPassword1",
-          placeholder: "Password"
-        }
+        attrs: { type: "text", id: "exampleInputPassword1" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("По")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", id: "exampleInputPassword1" }
       })
     ])
   }
@@ -26012,17 +25998,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-        _vm._v("Email address")
-      ]),
+      _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("C")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
         attrs: {
-          type: "email",
+          type: "text",
           id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
+          "aria-describedby": "emailHelp"
         }
       }),
       _vm._v(" "),
@@ -26038,17 +26021,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-        _vm._v("Password")
-      ]),
+      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("По")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "exampleInputPassword1",
-          placeholder: "Password"
-        }
+        attrs: { type: "еуче", id: "exampleInputPassword1", placeholder: "" }
       })
     ])
   }
@@ -26423,12 +26400,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "email",
-          id: "msisdn",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
-        }
+        attrs: { type: "email", id: "msisdn", "aria-describedby": "emailHelp" }
       })
     ])
   },
@@ -26441,7 +26413,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "imei", placeholder: "Password" }
+        attrs: { type: "password", id: "imei" }
       })
     ])
   }
@@ -27841,25 +27813,16 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-        _vm._v("Email address")
-      ]),
+      _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("MSISDN")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
         attrs: {
-          type: "email",
+          type: "text",
           id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
+          "aria-describedby": "emailHelp"
         }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
-        [_vm._v("We'll never share your email with anyone else.")]
-      )
+      })
     ])
   },
   function() {
@@ -27868,16 +27831,12 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-        _vm._v("Password")
+        _vm._v("IMEI")
       ]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "password",
-          id: "exampleInputPassword1",
-          placeholder: "Password"
-        }
+        attrs: { type: "text", id: "exampleInputPassword1" }
       })
     ])
   }
@@ -29609,12 +29568,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: {
-          type: "email",
-          id: "msisdn",
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter email"
-        }
+        attrs: { type: "text", id: "msisdn", "aria-describedby": "emailHelp" }
       })
     ])
   },
@@ -29627,7 +29581,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "imei", placeholder: "Password" }
+        attrs: { type: "text", id: "imei" }
       })
     ])
   },
@@ -29640,7 +29594,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "action_id", placeholder: "Password" }
+        attrs: { type: "text", id: "action_id" }
       })
     ])
   },
@@ -29655,7 +29609,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "action_name ", placeholder: "Password" }
+        attrs: { type: "text", id: "action_name" }
       })
     ])
   }

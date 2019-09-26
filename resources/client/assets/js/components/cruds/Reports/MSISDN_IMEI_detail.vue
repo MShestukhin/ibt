@@ -14,12 +14,12 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="msisdn">MSISDN</label>
-                                            <input type="email" class="form-control" id="msisdn" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <input type="email" class="form-control" id="msisdn" aria-describedby="emailHelp" >
                                             <!--                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                         </div>
                                         <div class="form-group">
                                             <label for="imei">IMEI</label>
-                                            <input type="password" class="form-control" id="imei" placeholder="Password">
+                                            <input type="password" class="form-control" id="imei">
                                         </div>
                                         <button type="button" v-on:click="getReport" class="btn btn-primary">Submit</button>
                                     </form>
