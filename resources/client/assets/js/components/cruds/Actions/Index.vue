@@ -26,6 +26,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             <datatable
                                     v-if="!loading"
                                     :columns="columns"
@@ -58,20 +59,20 @@ export default {
         return {
             columns: [
                 { title: '#', field: 'id', sortable: true, colStyle: 'width: 50px;' },
-                { title: 'Акция',field: 'name', visible: true },
-                { title: 'Ed', field: 'act_sd', visible: true },
-                { title: 'Sd', field: 'act_ed', visible: true },
-                { title: 'Приоритет', field: 'priority',  visible: true },
-                { title: 'Участники', field: 'act_members', visible: true },
-                { title: 'Создал акцию', field: 'user_name', visible: true },
-                { title: 'On/off предбонуса', field: 'pre_bonus_on', visible: true },
-                { title: 'On/off bonus', field: 'bonus_switch_off', visible: true },
-                { title: 'Каталог акции', field: 'folder_name', visible: true },
-                { title: 'Статус', field: 'state', visible: true },
+                { title: 'Акция',field: 'name',sortable: true, visible: true },
+                { title: 'Ed', field: 'act_sd',sortable: true, visible: true },
+                { title: 'Sd', field: 'act_ed',sortable: true, visible: true },
+                { title: 'Приоритет', field: 'priority', sortable: true, visible: true },
+                { title: 'Участники', field: 'act_members', sortable: true, visible: true },
+                { title: 'Создал акцию', field: 'user_name', sortable: true,visible: true },
+                { title: 'On/off предбонуса', field: 'pre_bonus_on', sortable: true,visible: true },
+                { title: 'On/off bonus', field: 'bonus_switch_off', sortable: true,visible: true },
+                { title: 'Каталог акции', field: 'folder_name', sortable: true,visible: true },
+                { title: 'Статус', field: 'state', sortable: true,visible: true },
                 { title: '', tdComp: DatatableActions}
 
             ],
-            query: { sort: 'id', order: 'desc' },
+            query: { sort: ['id','name'],  order: 'desc' },
             xprops: {
                 module: 'ActionsIndex',
                 route: 'actions'

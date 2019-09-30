@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="checkbox" disabled :checked="value">
+        <!--<input type="checkbox" disabled :checked="value">-->
     </div>
 </template>
 

@@ -41,8 +41,8 @@
                         <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab"><action-description :action="item[0]"/></div>
                         <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab"><action-params/></div>
                         <div class="tab-pane fade" id="regions" role="tabpanel" aria-labelledby="regions-tab"><action-regions/></div>
-                        <div class="tab-pane fade" id="EIRtriggers" role="tabpanel" aria-labelledby="EIRtriggers-tab">adfadf</div>
-                        <div class="tab-pane fade" id="members" role="tabpanel" aria-labelledby="members-tab">sss</div>
+                        <div class="tab-pane fade" id="EIRtriggers" role="tabpanel" aria-labelledby="EIRtriggers-tab"><action-eir-trigger/></div>
+                        <div class="tab-pane fade" id="members" role="tabpanel" aria-labelledby="members-tab"><action-members/></div>
                         <div class="tab-pane fade" id="pred_bonus" role="tabpanel" aria-labelledby="pred_bonus-tab"><action-bonus :bon="0"/></div>
                         <div class="tab-pane fade" id="add_bonus" role="tabpanel" aria-labelledby="add_bonus-tab"><action-bonus :bon="2"/></div>
                         <div class="tab-pane fade" id="dell_bonus" role="tabpanel" aria-labelledby="dell_bonus-tab"><action-bonus :bon="1"/></div>
@@ -61,9 +61,11 @@ import  ActionParams  from './Action/ActionParams.vue'
 import  ActionRefuse  from './Action/ActionRefuse.vue'
 import  ActionBonus  from './Action/ActionBonus.vue'
 import  ActionRegions  from './Action/ActionRegions.vue'
+import  ActionEirTrigger from './Action/ActionEirTriggers'
+import  ActionMembers from './Action/ActionMembers'
 
 export default {
-    components: { ActionDescription, ActionParams,ActionRefuse,ActionBonus,ActionRegions },
+    components: { ActionDescription, ActionParams,ActionRefuse,ActionBonus,ActionRegions, ActionEirTrigger, ActionMembers},
     data() {
         return {
             // Code...

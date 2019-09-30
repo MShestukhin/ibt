@@ -60,11 +60,11 @@
                           <div class="col-xs-12" >
                               <div class="col-md-6" v-for="obj in bonus.lang" v-if="obj.state==1">
                                   <label :for="obj.code + obj.lang_id">{{obj.code}}</label>
-                                  <textarea class="form-control" :id="bonus.code + bonus.lang_id" rows="2" placeholder="получилось">{{obj.val}}</textarea>
+                                  <textarea class="form-control" :id="bonus.code + bonus.lang_id" rows="2" placeholder="Не отсылать сообщение">{{obj.val}}</textarea>
                               </div>
                               <div class="col-md-6" v-for="obj in bonus.lang" v-if="obj.state==-1">
                                   <label :for="obj.code + obj.lang_id">{{obj.code}}</label>
-                                  <textarea class="form-control" :id="bonus.code + bonus.lang_id" rows="2" placeholder="не получилось">{{obj.val}}</textarea>
+                                  <textarea class="form-control" :id="bonus.code + bonus.lang_id" rows="2" placeholder="Не отсылать сообщение">{{obj.val}}</textarea>
                               </div>
                         </div>
                     </form>

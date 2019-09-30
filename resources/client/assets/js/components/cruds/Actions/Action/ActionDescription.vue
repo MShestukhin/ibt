@@ -27,16 +27,6 @@
     		<div class="row-fluid " id="act_sd">
                 <div class="col-md-4">
                     <date-picker v-model="action.act_sd" :config="options"/>
-                    <!--                    <div class="input-group date" data-provide="datepicker">-->
-<!--                        <input type="text" class="form-control">-->
-<!--                        <div class="input-group-addon">-->
-<!--                            <span class="glyphicon glyphicon-th"></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--					<div class="input-append">-->
-<!--						<input type="text" required class="dateTime sd"  name="act_sd" title="Срок действия акции. Начало периода (дд.мм.гггг чч:ми:сс)" placeholder="дд.мм.гггг чч:ми:сс" :value="action.act_sd">-->
-<!--						<span class="add-on"><i class="icon-calendar"></i></span>-->
-<!--					</div>-->
 			    </div>
 
 			    <div class="col-md-4">

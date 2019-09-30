@@ -69,7 +69,7 @@ class ActionsController extends Controller
             start with id = 0
             connect by prior id = p_id) f on af.folder_id = f.id
           left join svcweb.users_ u on a.su = u.login and u.ed is null
-        where sysdate between a.sd and a.ed
+        where sysdate between a.sd and a.ed  order by name
           )";
         $query=DB::select($sql); 
         // return new ActionsResource($query);

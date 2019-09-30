@@ -18,7 +18,11 @@
 <!--                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
+                                            <label for="exampleInputPassword1">C</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">По</label>
                                             <input type="text" class="form-control" id="exampleInputPassword1">
                                         </div>
                                         <button type="button" v-on:click="getReport" class="btn btn-primary">Submit</button>
