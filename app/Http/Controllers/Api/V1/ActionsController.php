@@ -71,7 +71,8 @@ class ActionsController extends Controller
           left join svcweb.users_ u on a.su = u.login and u.ed is null
         where sysdate between a.sd and a.ed
           )";
-        $query=DB::select($sql); 
+        $query=DB::select($sql);
+//        array_push($query,$bonus_switch_off);
         // return new ActionsResource($query);
         //   return $sql;
         return new ActionsResource($query);

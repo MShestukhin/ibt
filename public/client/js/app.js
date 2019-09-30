@@ -597,16 +597,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2132,6 +2122,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {//
 //
 //
 //
@@ -2169,8 +2160,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Action_free"
+    name: "Action_free",
+    data: function data() {
+        return {
+            date: null,
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
+        };
+    },
+
+    methods: {
+        getReport: function getReport() {
+            axios.get('/api/v1/num_action_members').then(function (response) {
+                var $a = $("<a>");
+                $a.attr("href", response.data);
+                $("body").append($a);
+                $a.attr("download", "Report.xlsx");
+                $a[0].click();
+                $a.remove();
+            });
+        }
+    }
 });
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -2179,6 +2193,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {//
+//
+//
+//
 //
 //
 //
@@ -2218,8 +2236,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Action_members"
+    name: "Action_members",
+    data: function data() {
+        return {
+            date: null,
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
+        };
+    },
+
+    methods: {
+        getReport: function getReport() {
+            axios.get('/api/v1/num_action_members').then(function (response) {
+                var $a = $("<a>");
+                $a.attr("href", response.data);
+                $("body").append($a);
+                $a.attr("download", "Report.xlsx");
+                $a[0].click();
+                $a.remove();
+            });
+        }
+    }
 });
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -2228,7 +2269,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
+/* WEBPACK VAR INJECTION */(function($) {//
 //
 //
 //
@@ -2265,8 +2306,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Err_processing_bonus"
+    name: "Err_processing_bonus",
+    methods: {
+        getReport: function getReport() {
+            axios.get('/api/v1/num_action_members').then(function (response) {
+                var $a = $("<a>");
+                $a.attr("href", response.data);
+                $("body").append($a);
+                $a.attr("download", "Report.xlsx");
+                $a[0].click();
+                $a.remove();
+            });
+        }
+    }
 });
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -2310,9 +2364,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "MSISDN_IMEI_detail",
+    data: function data() {
+        return {
+            date: null,
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
+        };
+    },
+
     methods: {
         getReport: function getReport() {
             axios.get('/api/v1/num_action_members').then(function (response) {
@@ -2370,9 +2444,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Num_action_members",
+    data: function data() {
+        return {
+            date: null,
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
+        };
+    },
+
     methods: {
         getReport: function getReport() {
             axios.get('/api/v1/num_action_members').then(function (response) {
@@ -2434,9 +2524,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "SMS_messege_msisdn",
+    data: function data() {
+        return {
+            date: null,
+            options: {
+                format: 'YYYY.MM.DD hh:mm:ss',
+                useCurrent: false
+            }
+        };
+    },
+
     methods: {
         getReport: function getReport() {
             axios.get('/api/v1/num_action_members').then(function (response) {
@@ -3598,7 +3708,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3658,7 +3768,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3733,7 +3843,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3793,7 +3903,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3838,7 +3948,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -3958,7 +4068,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -24497,7 +24607,73 @@ var render = function() {
                     _c("form", [
                       _vm._m(1),
                       _vm._v(" "),
-                      _vm._m(2),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "sd" } }, [_vm._v("С")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "sd",
+                              "aria-describedby": "ed_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "ed_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "ed" } }, [_vm._v("По")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "ed",
+                              "aria-describedby": "sd_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "sd_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "button",
@@ -24506,7 +24682,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: { click: _vm.getReport }
                         },
-                        [_vm._v("Submit")]
+                        [_vm._v("Показать")]
                       )
                     ])
                   ])
@@ -24542,23 +24718,8 @@ var staticRenderFns = [
         attrs: {
           type: "text",
           id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp"
+          placeholder: "Название акции"
         }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-        _vm._v("Password")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "exampleInputPassword1" }
       })
     ])
   }
@@ -24959,13 +25120,81 @@ var render = function() {
                       _vm._m(3),
                       _vm._v(" "),
                       _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "sd" } }, [_vm._v("С")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "sd",
+                              "aria-describedby": "ed_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "ed_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "ed" } }, [_vm._v("По")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "ed",
+                              "aria-describedby": "sd_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "sd_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
                         "button",
                         {
                           staticClass: "btn btn-primary",
                           attrs: { type: "button" },
                           on: { click: _vm.getReport }
                         },
-                        [_vm._v("Submit")]
+                        [_vm._v("Показать")]
                       )
                     ])
                   ])
@@ -24996,8 +25225,19 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "text", id: "msisdn", "aria-describedby": "emailHelp" }
-      })
+        attrs: {
+          type: "text",
+          id: "msisdn",
+          "aria-describedby": "msisdnHelp",
+          placeholder: "MSISDN"
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "small",
+        { staticClass: "form-text text-muted", attrs: { id: "msisdnHelp" } },
+        [_vm._v("7xxxxxxxxxx")]
+      )
     ])
   },
   function() {
@@ -25009,7 +25249,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "text", id: "action_id" }
+        attrs: { type: "text", id: "action_id", placeholder: "ID акции" }
       })
     ])
   },
@@ -25024,7 +25264,11 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "text", id: "action_name " }
+        attrs: {
+          type: "text",
+          id: "action_name",
+          placeholder: "Название акции"
+        }
       })
     ])
   }
@@ -25643,9 +25887,73 @@ var render = function() {
                     _c("form", [
                       _vm._m(1),
                       _vm._v(" "),
-                      _vm._m(2),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "sd" } }, [_vm._v("С")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "sd",
+                              "aria-describedby": "ed_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "ed_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
-                      _vm._m(3),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "ed" } }, [_vm._v("По")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "ed",
+                              "aria-describedby": "sd_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "sd_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "button",
@@ -25654,7 +25962,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: { click: _vm.getReport }
                         },
-                        [_vm._v("Submit")]
+                        [_vm._v("Показать")]
                       )
                     ])
                   ])
@@ -25681,41 +25989,17 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("Акция")]),
+      _c("label", { attrs: { for: "action_name" } }, [
+        _vm._v("Название акции")
+      ]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
         attrs: {
           type: "text",
-          id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp"
+          id: "action_name",
+          placeholder: "Введение ID или название  "
         }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("С")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "exampleInputPassword1" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("По")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "exampleInputPassword1" }
       })
     ])
   }
@@ -25960,9 +26244,73 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-xs-6" }, [
                     _c("form", [
-                      _vm._m(1),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "sd" } }, [_vm._v("С")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "sd",
+                              "aria-describedby": "ed_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "ed_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
-                      _vm._m(2),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "ed" } }, [_vm._v("По")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "ed",
+                              "aria-describedby": "sd_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "sd_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "button",
@@ -25971,7 +26319,7 @@ var render = function() {
                           attrs: { type: "button" },
                           on: { click: _vm.getReport }
                         },
-                        [_vm._v("Submit")]
+                        [_vm._v("Показать")]
                       )
                     ])
                   ])
@@ -25991,42 +26339,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("section", { staticClass: "content-header" }, [
       _c("h1", [_vm._v("Количество участников в акции")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputEmail1" } }, [_vm._v("C")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp"
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        { staticClass: "form-text text-muted", attrs: { id: "emailHelp" } },
-        [_vm._v("We'll never share your email with anyone else.")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleInputPassword1" } }, [_vm._v("По")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "еуче", id: "exampleInputPassword1", placeholder: "" }
-      })
     ])
   }
 ]
@@ -26363,13 +26675,81 @@ var render = function() {
                       _vm._m(2),
                       _vm._v(" "),
                       _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "sd" } }, [_vm._v("С")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "sd",
+                              "aria-describedby": "ed_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "ed_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "ed" } }, [_vm._v("По")]),
+                          _vm._v(" "),
+                          _c("date-picker", {
+                            attrs: {
+                              config: _vm.options,
+                              id: "ed",
+                              "aria-describedby": "sd_help",
+                              placeholder: "дд.мм.гггг чч:ми:cc"
+                            },
+                            model: {
+                              value: _vm.date,
+                              callback: function($$v) {
+                                _vm.date = $$v
+                              },
+                              expression: "date"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "form-text text-muted",
+                              attrs: { id: "sd_help" }
+                            },
+                            [_vm._v("Время московское")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
                         "button",
                         {
                           staticClass: "btn btn-primary",
                           attrs: { type: "button" },
                           on: { click: _vm.getReport }
                         },
-                        [_vm._v("Submit")]
+                        [_vm._v("Показать")]
                       )
                     ])
                   ])
@@ -26400,8 +26780,19 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "email", id: "msisdn", "aria-describedby": "emailHelp" }
-      })
+        attrs: {
+          type: "text",
+          id: "msisdn",
+          "aria-describedby": "msisdn_help",
+          placeholder: "MSISDN"
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "small",
+        { staticClass: "form-text text-muted", attrs: { id: "msisdn_help" } },
+        [_vm._v("7xxxxxxxxxx")]
+      )
     ])
   },
   function() {
@@ -26413,7 +26804,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "password", id: "imei" }
+        attrs: { type: "text", id: "imei", placeholder: "IMEI" }
       })
     ])
   }

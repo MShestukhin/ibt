@@ -14,18 +14,28 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="msisdn">MSISDN</label>
-                                            <input type="text" class="form-control" id="msisdn" aria-describedby="emailHelp">
-                                            <!--                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                            <input type="text" class="form-control" id="msisdn" aria-describedby="msisdnHelp" placeholder="MSISDN">
+                                            <small id="msisdnHelp" class="form-text text-muted">7xxxxxxxxxx</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="action_id">ID Акции</label>
-                                            <input type="text" class="form-control" id="action_id">
+                                            <input type="text" class="form-control" id="action_id" placeholder="ID акции">
                                         </div>
                                         <div class="form-group">
                                             <label for="action_name">Название акции</label>
-                                            <input type="text" class="form-control" id="action_name ">
+                                            <input type="text" class="form-control" id="action_name" placeholder="Название акции">
                                         </div>
-                                        <button type="button" v-on:click="getReport" class="btn btn-primary">Submit</button>
+                                        <div class="form-group">
+                                            <label for="sd">С</label>
+                                            <date-picker v-model="date" :config="options" id="sd" aria-describedby="ed_help" placeholder="дд.мм.гггг чч:ми:cc"/>
+                                            <small id="ed_help" class="form-text text-muted">Время московское</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ed">По</label>
+                                            <date-picker v-model="date" :config="options" id="ed" aria-describedby="sd_help" placeholder="дд.мм.гггг чч:ми:cc"/>
+                                            <small id="sd_help" class="form-text text-muted">Время московское</small>
+                                        </div>
+                                        <button type="button" v-on:click="getReport" class="btn btn-primary">Показать</button>
                                     </form>
                                 </div>
                             </div>
@@ -40,6 +50,15 @@
 <script>
     export default {
         name: "SMS_messege_msisdn",
+        data () {
+            return {
+                date : null,
+                options: {
+                    format: 'YYYY.MM.DD hh:mm:ss',
+                    useCurrent: false,
+                }
+            }
+        },
         methods : {
             getReport: function () {
                 axios.get('/api/v1/num_action_members')
