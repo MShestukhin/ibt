@@ -35,7 +35,20 @@
 
 <script>
     export default {
-        name: "Err_processing_bonus"
+        name: "Err_processing_bonus",
+        methods : {
+            getReport: function () {
+                axios.get('/api/v1/num_action_members')
+                    .then(response => {
+                        var $a = $("<a>");
+                        $a.attr("href",response.data);
+                        $("body").append($a);
+                        $a.attr("download","Report.xlsx");
+                        $a[0].click();
+                        $a.remove();
+                    })
+            }
+        }
     }
 </script>
 

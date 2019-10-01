@@ -26,11 +26,11 @@
             <label class="col-md-12" for="act_sd">Срок действия акции</label>
     		<div class="row-fluid " id="act_sd">
                 <div class="col-md-4">
-                    <date-picker v-model="action.act_sd" :config="options"/>
+                    <date-picker v-model="action.act_sd" :config="options" placeholder="дд.мм.гггг чч:мм:cc"/>
 			    </div>
 
 			    <div class="col-md-4">
-                    <date-picker v-model="date" :config="options"/>
+                    <date-picker v-model="date" :config="options" placeholder="дд.мм.гггг чч:мм:cc"/>
 				</div>
 			</div>
 

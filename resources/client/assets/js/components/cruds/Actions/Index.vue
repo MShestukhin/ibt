@@ -10,9 +10,39 @@
 
                         <div class="box-header with-border">
                             <div class="btn-group">
-                                <router-link :to="{ name: xprops.route + '.create' }" class="btn btn-success btn-sm">
-                                    <i class="fa fa-plus"></i> Add new
-                                </router-link>
+                                <!--<router-link :to="{ name: xprops.route + '.create' }" class="btn btn-success btn-sm">-->
+                                    <!--<i class="fa fa-plus"></i> Add new-->
+                                <!--</router-link>-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                    <i class="fa fa-plus"></i> Добавить акцию
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel">Создание акции</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group" id="act_name">
+                                                    <span class="input-group-addon"><i class="glyphicon">1788</i></span>
+                                                    <input  style="width:250px" id="name"  name="act_name" type="text" class="form-control" placeholder="Наименование акции">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Зарезервировать</button>
+                                                <router-link :to="{ name: xprops.route + '.create' }" class="btn btn-success btn-sm">
+                                                Создать
+                                                </router-link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <button type="button" class="btn btn-default btn-sm" @click="fetchData">
                                     <i class="fa fa-refresh" :class="{'fa-spin': loading}"></i> Refresh
                                 </button>

@@ -14,18 +14,20 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Название акции</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Название акции">
 <!--                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">C</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1">
+                                            <label for="sd">С</label>
+                                            <date-picker v-model="date" :config="options" id="sd" aria-describedby="ed_help" placeholder="дд.мм.гггг чч:ми:cc"/>
+                                            <small id="ed_help" class="form-text text-muted">Время московское</small>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">По</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1">
+                                            <label for="ed">По</label>
+                                            <date-picker v-model="date" :config="options" id="ed" aria-describedby="sd_help" placeholder="дд.мм.гггг чч:ми:cc"/>
+                                            <small id="sd_help" class="form-text text-muted">Время московское</small>
                                         </div>
-                                        <button type="button" v-on:click="getReport" class="btn btn-primary">Submit</button>
+                                        <button type="button" v-on:click="getReport" class="btn btn-primary">Показать</button>
                                     </form>
                                 </div>
                             </div>
@@ -40,6 +42,15 @@
 <script>
     export default {
         name: "Num_action_members",
+        data () {
+            return {
+                date : null,
+                options: {
+                    format: 'YYYY.MM.DD hh:mm:ss',
+                    useCurrent: false,
+                }
+            }
+        },
         methods : {
             getReport: function () {
                 axios.get('/api/v1/num_action_members')
