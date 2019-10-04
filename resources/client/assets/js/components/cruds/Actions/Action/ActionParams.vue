@@ -123,10 +123,12 @@
             </select>
         </div>
 
+
         <div class="form-inline col-md-12">
             <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
             <label for="exampleFormControlSelect1">{{item[1].time_postprocessing_for_one_bonus_per_day.dsc}}</label>
         </div>
+
 
         <div class="form-group" v-for="(items, index) in item[0]">
             <div class="col-md-6">
@@ -136,12 +138,14 @@
         </div>
 
         <div class="form-inline col-md-12">
-            <input type="text" class="form-control" :id="item[1].limit_on_number_of_repeated_bonus_imei.dsc" placeholder="First name" value="Mark" required>
+            <br>
+            <input type="text" class="form-control" :id="item[1].limit_on_number_of_repeated_bonus_imei.dsc" placeholder="First name" value="Mark1" required>
             <label for="exampleFormControlSelect1">{{item[1].limit_on_number_of_repeated_bonus_imei.dsc}}</label>
         </div>
 
         <div class="col-md-12">
             <div class="form-check">
+                <br>
                 <input class="form-check-input" type="checkbox" v-model="sms_on_number_of_repeated_bonus_imei=show_sms_on_number_of_repeated_bonus_imei[item[1].sms_on_number_of_repeated_bonus_imei.val]"  :id="item[1].sms_on_number_of_repeated_bonus_imei.code">
                 <label class="form-check-label" :for="item[1].sms_on_number_of_repeated_bonus_imei.code">
                     {{item[1].sms_on_number_of_repeated_bonus_imei.dsc}}
